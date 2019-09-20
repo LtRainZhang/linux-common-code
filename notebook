@@ -4,3 +4,4 @@
     wc -w filename 看文件里有多少个word。
     wc -L filename 文件里最长的那一行是多少个字。
        
+cat OUTCAR | sed -n '/POSITION/,/ writing wavefunctions/{/ writing wavefunctions/b;p}'|grep 'free  energy   TOTEN'|awk '{print $5}' > pot_en &
